@@ -1,0 +1,176 @@
+/* Reset some default styles */
+body, h1, nav, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f6f8fa;
+    color: #222;
+    min-height: 100vh;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 24px 40px 24px 24px;
+    position: relative;
+    z-index: 10;
+}
+
+/* Logo image styling */
+header img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    position: absolute;
+    top: 24px;
+    left: 24px;
+}
+
+/* Move content to the right of the image */
+header h1, header nav {
+    margin-left: 100px;
+}
+
+/* Title styling */
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+/* Navigation styling */
+nav {
+    display: flex;
+    gap: 32px;
+    margin-top: 8px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #444;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover {
+    background: #e0e7ef;
+    color: #0078d7;
+}
+
+/* Section container styling */
+.section_container {
+    display: flex;
+    flex-direction: row-reverse; /* Image right, text left */
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    padding: 60px 10vw 40px 10vw;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    margin: 40px auto 0 auto;
+    max-width: 1100px;
+    scroll-margin-top: 100px;
+}
+
+/* Header image styling */
+.header_image img {
+    width: 340px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+}
+
+/* Header text styling */
+.header_text {
+    max-width: 500px;
+    color: #000;
+}
+
+.header_text h2 {
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+
+.header_text p {
+    font-size: 1.15rem;
+    color: #000;
+    margin-bottom: 28px;
+    line-height: 1.6;
+}
+
+/* Join Now button styling */
+.header_text a button {
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 38px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: background 0.2s, transform 0.2s;
+}
+
+.header_text a button:hover {
+    background: #222;
+    color: #fff;
+    transform: translateY(-2px) scale(1.03);
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 32px 0;
+    color: #888;
+    background: #f6f8fa;
+    font-size: 1rem;
+    margin-top: 40px;
+    border-top: 1px solid #e0e7ef;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .section_container {
+        flex-direction: column-reverse;
+        gap: 32px;
+        padding: 40px 4vw;
+    }
+    .header_image img {
+        width: 90vw;
+        max-width: 340px;
+        height: auto;
+    }
+    .header_text {
+        max-width: 100%;
+    }
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 24px 24px 24px;
+    }
+    header img {
+        position: static;
+        margin-bottom: 16px;
+    }
+}
